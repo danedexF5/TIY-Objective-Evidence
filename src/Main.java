@@ -10,131 +10,128 @@ public class Main {
         House yourHouse;
 
         //creating an object
-        myHouse = new House();
+        myHouse = new House("name", "color", 100000, "neighborhood", "state");
         //creating another object
-        yourHouse = new House();
+        yourHouse = new House("name", "color", 200000, "neighborhood", "state");
 
         /**
          * class details/variables of the house
          */
-        myHouse.name = "Durham House";
-        myHouse.color = "blue";
-        myHouse.value = 500000.00;
-        myHouse.neighborhood = "Cleveland Holloway";
-        myHouse.state = "NC";
+        myHouse.setName("Durham House");
+        myHouse.setColor("blue");
 
-        System.out.println("My " + myHouse.name + " that is " + myHouse.color + " and that is " + myHouse.value + " is located in ");
-        System.out.println(myHouse.neighborhood + " in " + myHouse.state + ".");
+        myHouse.setNeighborhood("Cleveland Holloway");
+        myHouse.setState("NC");
 
-        yourHouse.name = "Charleston House";
-        yourHouse.color = "red";
-        yourHouse.value = 600000.00;
-        yourHouse.neighborhood = "Downtown";
-        yourHouse.state = "SC";
+        myHouse.setValue(120000);
 
-        System.out.println("Your " + yourHouse.name + " that is " + yourHouse.color + " and that is " + yourHouse.value);
-        System.out.println(" is located in " + yourHouse.neighborhood + " in " + yourHouse.state + ".");
+        System.out.println("My " + myHouse.getName() + " that is " + myHouse.getColor() + " and that is " + myHouse.getValue() + " is located in ");
+        System.out.println(myHouse.getNeighborhood() + " in " + myHouse.getState() + ".");
+
+        yourHouse.setName("Charleston House");
+        yourHouse.setColor("red");
+
+        yourHouse.setNeighborhood("Downtown");
+        yourHouse.setState("SC");
+
+        yourHouse.setValue(250000);
+
+        System.out.println("Your " + yourHouse.getName() + " that is " + yourHouse.getColor() + " and that is " + yourHouse.getValue());
+        System.out.println(" is located in " + yourHouse.getNeighborhood() + " in " + yourHouse.getState() + ".");
 
         /**
          * changing the value of my house
          */
-        myHouse.value = 700000.00;
+        //myHouse.value = 700000;
 
-        System.out.println("My " + myHouse.name + " that is " + myHouse.color + " and that is " + myHouse.value + " is located in ");
-        System.out.println(myHouse.neighborhood + " in " + myHouse.state + ".");
+        System.out.println("My " + myHouse.getName() + " that is " + myHouse.getColor() + " and that is " + myHouse.getValue() + " is located in ");
+        System.out.println(myHouse.getNeighborhood() + " in " + myHouse.getState() + ".");
 
 
         Car myCar;
         Car yourCar;
 
-        myCar = new Car();
-        yourCar = new Car();
+        myCar = new Car(3, "Japan");
+        yourCar = new Car(3, "USA");
 
-        myCar.color = "black";
-        myCar.country = "Japan";
+        myCar.setCountry("Japan");
+        myCar.setQuantity(3);
 
-        System.out.println("My car " + " is " + myCar.color + " and is from " + myCar.country + ".");
+        System.out.println("My car is from " + myCar.getCountry() + " and I have had " + myCar.getQuantity() + " of them previously" + ".");
 
-        /**
-         *changing state of car color
-         */
-        myCar.color = "Orange";
+        yourCar.setCountry("USA");
+        yourCar.setQuantity(3);
 
-        System.out.println("My car " + " is " + myCar.color + " and is from " + myCar.country + ".");
-
-        yourCar.color = "white";
-        yourCar.country = "USA";
-
-        System.out.println("Your car is " + yourCar.color + " and is from " + yourCar.country + ".");
+        System.out.println("Your car is from " + yourCar.getCountry() + yourCar.getQuantity() + ".");
 
         Pet myPet;
         Pet yourPet;
 
-        myPet = new Pet();
-        yourPet = new Pet();
+        myPet = new Pet("dog", 6);
+        yourPet = new Pet("cat", 9);
 
-        myPet.type = "dog";
-        myPet.size = "very big";
+        myPet.setType("dog");
+        myPet.setAge(6);
 
-        System.out.println("My pet is a " + myPet.size + " " + myPet.type + ".");
+        System.out.println("My pet is a " + myPet.getType() + " and it is " + myPet.getAge() + " years old.");
 
-        yourPet.type = "cat";
-        yourPet.size = "tiny";
+        yourPet.setType("cat");
+        yourPet.setAge(9);
 
-        System.out.println("Your pet is a " + yourPet.size + " " + yourPet.type + ".");
+        System.out.println("Your pet is " + yourPet.getAge() + " years old and it is a " + yourPet.getType() + ".");
 
         Bike myBike;
         Bike yourBike;
 
-        myBike = new Bike();
-        yourBike = new Bike();
+        myBike = new Bike("green", 10);
+        yourBike = new Bike("yellow", 12);
 
-        myBike.color = "green";
-        myBike.speeds = 10;
+        myBike.setSpeeds (11);
+        myBike.setColor("pink");
 
-        System.out.println("My bike is " + myBike.color + " and has " + myBike.speeds + " speeds.");
+        System.out.println("My bike is " + myBike.getColor() + " and has " + myBike.getSpeeds() + " speeds.");
 
         /**
          * changing state of pet type
          */
-        myPet.type = "Bear";
+        myPet.setType("Bear");
 
-        System.out.println("Your pet is a " + yourPet.size + " " + yourPet.type + ".");
+        System.out.println("Your pet is a " + yourPet.getType() + " that is " + yourPet.getAge() + " years old.");
 
-        yourBike.color = "yellow";
-        yourBike.speeds = 12;
+        yourBike.setSpeeds(15);
+        yourBike.setColor("navy blue");
 
-        System.out.println("Your bike is " + yourBike.color + " and has " + yourBike.speeds + " speeds.");
+        System.out.println("Your bike is " + yourBike.getColor() + " and has " + yourBike.getSpeeds() + " speeds.");
 
         Screwdriver myScrewdriver;
         Screwdriver yourScrewdriver;
 
-        myScrewdriver = new Screwdriver();
-        yourScrewdriver = new Screwdriver();
+        myScrewdriver = new Screwdriver(3, "Flathead");
+        yourScrewdriver = new Screwdriver(1, "Phillips");
 
-        myScrewdriver.quantity = 3;
-        myScrewdriver.types = "Flathead";
+        myScrewdriver.setQuantity(3);
+        myScrewdriver.setTypes("Flathead");
 
-        System.out.println("I have " + myScrewdriver.quantity + " " + myScrewdriver.types + " screwdrivers.");
+        System.out.println("I have " + myScrewdriver.getQuantity() + " " + myScrewdriver.getTypes() + " screwdrivers.");
 
-        yourScrewdriver.quantity = 1;
-        yourScrewdriver.types = "Phillips";
+        yourScrewdriver.setQuantity(1);
+        yourScrewdriver.setTypes("Phillips");
 
-        System.out.println("You have " + yourScrewdriver.quantity + " " + yourScrewdriver.types + " screwdriver.");
+        System.out.println("You have " + yourScrewdriver.getQuantity() + " " + yourScrewdriver.getTypes() + " screwdriver.");
 
         /**
          * changing the color of my bike
          */
-        yourBike.color = "Baby Blue";
 
-        System.out.println("My bike is " + yourBike.color + " and has " + yourBike.speeds + " speeds.");
+
+        System.out.println("My bike is " + yourBike.getColor() + " and has " + yourBike.getSpeeds() + " speeds.");
 
         /**
          * changing my screwriver quantity
          */
-        myScrewdriver.quantity = 2;
+        myScrewdriver.setQuantity(2);
 
-        System.out.println("I have " + myScrewdriver.quantity + " " + myScrewdriver.types + " screwdrivers.");
+        System.out.println("I have " + myScrewdriver.getQuantity() + " " + myScrewdriver.getTypes() + " screwdrivers.");
 
 
 
